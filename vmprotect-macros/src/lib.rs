@@ -5,14 +5,14 @@ use syn::{parse_macro_input, ItemFn, Stmt};
 /// Creates the marker by calling the correct function from the vmprotect sdk.
 fn start_marker(prot_type: &str, fn_name: &str) -> syn::Result<Stmt> {
     let token_stream = match prot_type {
-        "mutation" => {
+        "mutate" => {
             quote! {
                 unsafe {
                    vmprotect_sys::VMProtectBeginMutation(vmprotect_sys::real_c_string::real_c_string!(#fn_name))
                 }
             }
         }
-        "virtualization" => {
+        "virtualize" => {
             quote! {
                 unsafe {
                   vmprotect_sys::VMProtectBeginVirtualization(vmprotect_sys::real_c_string::real_c_string!(#fn_name))

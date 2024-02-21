@@ -1,0 +1,12 @@
+[package]
+name = "vmprotect-sys"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["user"]
+kernel = []
+user = []
+
+[dependencies]
+real_c_string = "1.0.1"

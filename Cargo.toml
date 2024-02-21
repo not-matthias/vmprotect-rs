@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "vmprotect",
+    "vmprotect-macros",
+    "vmprotect-sys",
+]
+resolver = "2"

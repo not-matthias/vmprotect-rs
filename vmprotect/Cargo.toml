@@ -1,0 +1,8 @@
+[package]
+name = "vmprotect"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+vmprotect-sys = { path = "../vmprotect-sys" }
+vmprotect-macros = { path = "../vmprotect-macros" }

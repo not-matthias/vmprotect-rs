@@ -1,3 +1,4 @@
+#![no_std]
 mod checks;
 mod licensing;
 

@@ -1,4 +1,8 @@
-use std::ffi::c_char;
+extern crate alloc;
+
+use alloc::string::String;
+use alloc::vec::Vec;
+use core::ffi::c_char;
 use vmprotect_sys::VMProtectGetCurrentHWID;
 
 #[inline(always)]
